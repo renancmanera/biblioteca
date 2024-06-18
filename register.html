@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Formulário de Registro da Biblioteca</title>
+    <style>
+        body {
+            background-color: #6ebbff39;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0px;
+            font-family: 'Poppins', sans-serif;
+        }
+        .register {
+            border: 1px solid black;
+            width: 400px;
+            height: 500px;
+            background: url('fundologin.avif');
+            color: white;
+            border-radius: 20px;
+            box-shadow: 0px 0px 20px rgba(0,0,0,0.75);
+            background-size: cover;
+            background-position: center;
+            overflow: hidden;
+        }
+        form {
+            display: block;
+            box-sizing: border-box;
+            padding: 40px;
+            width: 100%;
+            height: 100%;
+            flex-direction: column;
+            display: flex;
+            gap: 5px;
+        }
+        h1{
+            font-weight: normal;
+            font-size: 24px;
+            text-shadow: 0px 0px 2px rgba(0,0,0,0.5);
+            margin-bottom: 10px;
+        }
+        label {
+            color: rgba(255, 255, 255, 0.8);
+            text-transform: uppercase;
+            font-size: 10px;
+            letter-spacing: 2px;
+            padding-left: 10px;
+        }
+        input {
+            background: rgba(255, 255, 255, 0.5);
+            height: 40px;
+            line-height: 40px;
+            border-radius: 20px;
+            padding: 0px 20px;
+            border: none;
+            margin-bottom: 20px;
+            color: white;
+        }
+        button {
+            background: rgb(45, 126, 231);
+            height: 40px;
+            line-height: 40px;
+            border: none;
+            border-radius: 40px;
+            margin: 10px 0px;
+            box-shadow: 0px 0px 5px rgba(0,0,0,0.3);
+            color: white;
+        }
+        p {
+            font-size: 15px;
+            color: rgba(255, 255, 255, 0.8);
+            text-shadow: 0px 0px 2px rgba(0,0,0,0.5);
+            margin-bottom: 20px;
+        }
+        #register {
+            text-align: center;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="register">
+        <form id="registerForm">
+            <h1>REGISTRO</h1>
+            <p>Registre-se na plataforma da Biblioteca Online.</p>
+            <label for="newUsername">Usuário:</label>
+            <input type="text" id="newUsername" name="newUsername" required>
+            <label for="newPassword">Senha:</label>
+            <input type="password" id="newPassword" name="newPassword" required>
+            <button type="submit">Registrar</button>
+            <p><a href="login.html" id="register">Login</p></a>
+        </form>
+    </div>
+    <script>
+        document.getElementById('registerForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const newUsername = document.getElementById('newUsername').value;
+            const newPassword = document.getElementById('newPassword').value;
+            
+            localStorage.setItem('registeredUsername', newUsername);
+            localStorage.setItem('registeredPassword', newPassword);
+
+            alert('Registrado com sucesso! Agora você pode fazer login.');
+            window.location.href = 'login.html';
+        });
+    </script>
+</body>
+</html>

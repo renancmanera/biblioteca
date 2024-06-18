@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="header.css">
+    <script src="header.js"></script>
+</head>
+<body>
+    <nav id="sidebar">
+        <div id="sidebar_content">
+            <div id="user">
+                <img src="avatar.avif" id="user_avatar">
+                <style>
+                    #user_avatar {
+                        width: 70px; /* Ajuste este valor conforme necessário */
+                        height: 70px; /* Certifique-se de que a altura e a largura sejam iguais */
+                        border-radius: 50%; /* Torna a imagem redonda */
+                        object-fit: cover; /* Garante que a imagem se ajuste bem dentro do contêiner */
+                        margin-right: 20px;
+                    }
+                </style>
+                <p id="user_infos">
+                    <span class="item-description">
+                        Funcionário
+                    </span>
+                </p>
+            </div>
+    
+            <ul id="side_items">
+                <li class="side-item active">
+                    <a href="#">
+                        <i class="fa-solid fa-chart-line"></i>
+                        <span class="manter-livros">
+                            Manter livros
+                        </span>
+                    </a>
+                </li>
+    
+                <li class="side-item">
+                    <a href="#">
+                        <i class="fa-solid fa-user"></i>
+                        <span class="item-description">
+                            Cadastrar usuário
+                        </span>
+                    </a>
+                </li>
+    
+                <li class="side-item">
+                    <a href="#">
+                        <i class="fa-solid fa-bell"></i>
+                        <span class="item-description">
+                            Editar usuários
+                        </span>
+                    </a>
+                </li>
+    
+                <li class="side-item">
+                    <a href="#">
+                        <i class="fa-solid fa-box"></i>
+                        <span class="item-description">
+                            Registrar empréstimo
+                        </span>
+                    </a>
+                </li>
+    
+                <li class="side-item">
+                    <a href="#">
+                        <i class="fa-solid fa-image"></i>
+                        <span class="item-description">
+                            Editar empréstimos
+                        </span>
+                    </a>
+                </li>
+    
+                <li class="side-item">
+                    <a href="#">
+                        <i class="fa-solid fa-gear"></i>
+                        <span class="item-description">
+                            Eventos
+                        </span>
+                    </a>
+                </li>
+
+                <li class="side-item">
+                    <a href="#">
+                        <i class="fa-solid fa-gear"></i>
+                        <span class="item-description">
+                            Multas
+                        </span>
+                    </a>
+                </li>
+
+                <li class="side-item">
+                    <a href="#">
+                        <i class="fa-solid fa-gear"></i>
+                        <span class="item-description">
+                            Relatório de estoque
+                        </span>
+                    </a>
+                </li>
+            </ul>
+    
+            <div id="logout">
+                <a href="login.html"> <button id="logout_btn">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    <span class="item-description"> 
+                        Logout 
+                    </span>
+                </button> </a>
+            </div>
+           
+        </div>
+    </nav>
+    
+    <main>
+                <div class="card">
+                    <h1 class="gradient-text">Excluir livros</h1>
+                    <div class="output">
+                        
+                        <ol>
+                            <li>Voltar</li>
+                            <li></li>
+                        </ol>
+                    </div>
+                    <div class="input-area">
+                        
+                        <input type="text" id="numeroInput" placeholder="Digite o número do livro ou 1 para voltar">
+                        <button onclick="verificarExcluir()" id="enviarButton">Enviar</button>
+                    </div>
+                </div> 
+            </main>
+</body>
+</html>

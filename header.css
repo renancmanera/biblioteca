@@ -1,0 +1,204 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    background-color: #e3e9f7;
+}
+
+
+#sidebar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #ffffff;
+    
+    border-radius: 0px 18px 18px 0px;
+    
+   
+}
+
+#sidebar_content {
+    padding: 30px 20px; /* Add some padding for overall spacing */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+}
+
+#user {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px; /* Space between user info and menu items */
+}
+
+
+
+#user_infos {
+    display: flex;
+    flex-direction: column;
+}
+
+.item-description {
+    display: block;
+}
+
+#side_items {
+    list-style-type: none;
+    padding: 0;
+    
+}
+
+.side-item {
+    margin-bottom: 15px; 
+}
+
+.side-item a {
+    text-decoration: none;
+    color: #333;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 8px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.side-item a:hover {
+    background-color: #f0f0f0;
+    color: #007bff;
+}
+
+.side-item i {
+    margin-right: 10px;
+}
+
+#logout {
+    padding-top: 20px;
+}
+
+#logout_btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    transition: background-color 0.3s;
+}
+
+#logout_btn:hover {
+    background-color: #0056b3;
+}
+
+
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    width: 50vh;
+    height: 60vh;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 10px;
+    box-shadow: 0 0 10px black;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.output {
+    width: 100%;
+    height: 40%;
+    border: 1px solid #000;
+    border-radius: 5px;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.input-area {
+    width: 100%;
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.input-area h2 {
+    margin-bottom: 10px;
+}
+
+.input-area input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #000;
+    margin-bottom: 10px;
+}
+
+.input-area button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.input-area button:hover {
+    background-color: #0056b3;
+}
+h1.gradient-text {
+    font-size: 30px; /* Ajuste o tamanho da fonte conforme necessário */
+    font-weight: bold;
+    background: linear-gradient(to right, #00f, #00a, #007, #004);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    text-align: center; /* Centraliza o texto */
+   
+}
+
+li {
+    margin-left: 10px;
+}
+
+.manter-livros {
+    color: blue;
+}
+
+@media only screen and (min-width: 0px) and (max-width: 600px) {
+    main {
+        width: 30vh;
+        height: 80vh;
+    }
+    .card {
+        width: 40vh;
+        height: 50vh;
+    }
+    .output {
+        height: 45%; /* Ajuste para se adaptar ao tamanho do card */
+    }
+    .input-area {
+        height: 45%; /* Ajuste para se adaptar ao tamanho do card */
+    }
+}
+
+a {
+    text-decoration: none;
+}
