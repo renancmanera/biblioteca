@@ -1,9 +1,8 @@
 
-        function verificarHeader() {
+        /*function verificarHeader() {
             const numeroDigitado = document.getElementById('numeroInput').value;
             if (numeroDigitado === '1') {
-                // Redireciona para outra página (substitua a URL desejada)
-                window.location.href = "adicionar.html";
+                window.location.href = "adicionar.php";
             } else if (numeroDigitado === '2') {
                 window.location.href = "editar.html";
             } else if (numeroDigitado === '3') {
@@ -11,7 +10,7 @@
             } else if (numeroDigitado === '4') {
                 window.location.href = "pesquisar.html";
             } else {
-                alert('Digite um número válido ou a palavra "pesquisar".');
+                alert('Digite um número válido.');
             }
         }
 
