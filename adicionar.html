@@ -1,3 +1,27 @@
+<?php
+    if(isset($_POST['submit']))
+    {
+        include_once('config.php');
+
+        // Get the form data, including the book ID
+        $idlivros = $_POST['idlivros']; // Captura o ID do livro do formulário
+        $nome = $_POST['nome'];
+        $autor = $_POST['autor'];
+        $data = $_POST['data'];
+
+        // Perform the database query including the book ID
+        $result = mysqli_query($conexao, "INSERT INTO livros(idlivros, nome, autor, data) VALUES('$idlivros', '$nome', '$autor', '$data')");
+        
+        if($result) {
+            echo "Livro adicionado com sucesso!";
+        } else {
+            echo "Erro ao adicionar livro: " . mysqli_error($conexao);
+        }
+    }
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -119,28 +143,32 @@
                 <h1 class="gradient-text">Adicionar livros</h1>
                 <div class="output">
                     
+                    <form action="adicionar.php" method="POST">
+
                     <div class="form-group" id="group-book-name">
                         <label for="book-name" id="label-book-name">Nome do Livro:</label>
-                        <input type="text" id="book-name" name="book-name" required>
+                        <input name= "nome" type="text" id="book-name" name="book-name" required>
                     </div>
                     <div class="form-group" id="group-author-name">
                         <label for="author-name" id="label-author-name">Autor:</label>
-                        <input type="text" id="author-name" name="author-name" required>
+                        <input name= "autor" type="text" id="author-name" name="author-name" required>
                     </div>
                     <div class="form-group" id="group-publication-date">
                         <label for="publication-date" id="label-publication-date">Data de Publicação:</label>
-                        <input type="date" id="publication-date" name="publication-date" required>
+                        <input name= "data" type="date" id="publication-date" name="publication-date" required>
                     </div>
                     
                 </div>
                 <div class="input-area">
              
-                    <button onclick="verificarEditar()" id="enviarButton">Cadastrar</button>
+                <input name= "submit" type="submit" value="Cadastrar">
                 </div>
+</form>
 
-                <p id="voltar"><a href="header.html">Voltar</p></a>
+                <p id="voltar"><a href="header.html">Voltar</a></p>
 
             </div> 
         </main>
 </body>
 </html>
+

@@ -1,8 +1,8 @@
 
-        /*function verificarHeader() {
+        function verificarHeader() {
             const numeroDigitado = document.getElementById('numeroInput').value;
             if (numeroDigitado === '1') {
-                window.location.href = "adicionar.php";
+                window.location.href = "adicionar.html";
             } else if (numeroDigitado === '2') {
                 window.location.href = "editar.html";
             } else if (numeroDigitado === '3') {
