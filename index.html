@@ -12,7 +12,7 @@
             margin: 0px;
             font-family: 'Poppins', sans-serif;
         }
-        .register {
+        .login {
             border: 1px solid black;
             width: 400px;
             height: 500px;
@@ -80,29 +80,33 @@
     </style>
 </head>
 <body>
-    <div class="register">
-        <form id="registerForm">
-            <h1>REGISTRO</h1>
-            <p>Registre-se na plataforma da Biblioteca Online.</p>
-            <label for="newUsername">Usuário:</label>
-            <input type="text" id="newUsername" name="newUsername" required>
-            <label for="newPassword">Senha:</label>
-            <input type="password" id="newPassword" name="newPassword" required>
-            <button type="submit">Registrar</button>
-            <p><a href="index.html" id="register">Login</p></a>
+    <div class="login">
+        <form id="loginForm">
+            <h1>LOGIN</h1>
+            <p>Acesse a plataforma da Biblioteca Online.</p>
+            <label for="username">Usuário:</label>
+            <input type="text" id="username" name="username" required>
+            <label for="password">Senha:</label>
+            <input type="password" id="password" name="password" required>
+            <button type="submit">Confirmar</button>
+            <p><a href="register.html" id="register">Registre-se</p></a>
         </form>
     </div>
     <script>
-        document.getElementById('registerForm').addEventListener('submit', function(e) {
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
             e.preventDefault();
-            const newUsername = document.getElementById('newUsername').value;
-            const newPassword = document.getElementById('newPassword').value;
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
             
-            localStorage.setItem('registeredUsername', newUsername);
-            localStorage.setItem('registeredPassword', newPassword);
+            const registeredUsername = localStorage.getItem('registeredUsername');
+            const registeredPassword = localStorage.getItem('registeredPassword');
 
-            alert('Registrado com sucesso! Agora você pode fazer login.');
-            window.location.href = 'index.html';
+            if (username === registeredUsername && password === registeredPassword) {
+                alert('Login bem-sucedido!');
+                window.location.href = 'header.html';
+            } else {
+                alert('Usuário ou senha incorretos.');
+            }
         });
     </script>
 </body>
