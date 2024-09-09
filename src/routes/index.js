@@ -1,4 +1,4 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Router } from "react-router-dom";
 
 import SignIn from "../pages/SignIn";
 import SignUp from "../pages/SignUp";
@@ -10,8 +10,8 @@ import New from "../pages/New";
 
 function RoutesApp() {
   return (
+  <Router basename="biblioteca">
     <Routes>
-      <Route path="biblioteca/" element={<SignIn/>} />
       <Route path="/" element={<SignIn/>} />
       <Route path="/cadastrar" element={<SignUp/>} />
       
@@ -24,6 +24,7 @@ function RoutesApp() {
       
       <Route path="*" element={<h1>Página não encontrada. 404</h1>} />
     </Routes>
+    </Router>
   );
 }
 
