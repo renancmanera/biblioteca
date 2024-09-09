@@ -11,6 +11,7 @@ import New from "../pages/New";
 function RoutesApp() {
   return (
     <Routes>
+      <Route path="biblioteca/" element={<SignIn/>} />
       <Route path="/" element={<SignIn/>} />
       <Route path="/cadastrar" element={<SignUp/>} />
       
