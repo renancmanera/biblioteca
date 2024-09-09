@@ -10,9 +10,9 @@ import New from "../pages/New";
 
 function RoutesApp() {
   return (
-  <Router basename="biblioteca">
+
     <Routes>
-      <Route path="/" element={<SignIn/>} />
+      <Route path="biblioteca/" element={<SignIn/>} />
       <Route path="/cadastrar" element={<SignUp/>} />
       
       <Route path="/emprestimos" element={<Private><Emprestimos/></Private>} />
@@ -24,7 +24,7 @@ function RoutesApp() {
       
       <Route path="*" element={<h1>Página não encontrada. 404</h1>} />
     </Routes>
-    </Router>
+
   );
 }
 
