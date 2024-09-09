@@ -7,12 +7,12 @@ import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   return (
-    <BrowserRouter>
+  <BrowserRouter basename="/biblioteca">
     <AuthProvider>
       <ToastContainer autoClose={3000}/>
       <RoutesApp/>
     </AuthProvider>
-    </BrowserRouter>
+  </BrowserRouter>
   );
 }
 
