@@ -10,6 +10,7 @@ import New from "../pages/New";
 
 function RoutesApp() {
   return (
+  
     <Routes>
       <Route path="/" element={<SignIn />} />
       <Route path="/cadastrar" element={<SignUp />} />
@@ -22,6 +23,7 @@ function RoutesApp() {
 
       <Route path="*" element={<h1>Página não encontrada. 404</h1>} />
     </Routes>
+    
   );
 }
 

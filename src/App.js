@@ -1,5 +1,5 @@
-import { BrowserRouter } from "react-router-dom";
 import RoutesApp from "./routes";
+import { HashRouter } from "react-router-dom";
 
 import AuthProvider from "./contexts/auth";
 import { ToastContainer } from "react-toastify";
@@ -7,13 +7,15 @@ import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   return (
-  <BrowserRouter basename="/biblioteca">
+  <HashRouter>
     <AuthProvider>
       <ToastContainer autoClose={3000}/>
       <RoutesApp/>
     </AuthProvider>
-  </BrowserRouter>
+  </HashRouter>
+
   );
 }
+
 
 export default App;
