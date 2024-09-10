@@ -12,7 +12,7 @@ function RoutesApp() {
   return (
   
     <Routes>
-      <Route path="https://renancmanera.github.io/biblioteca/" element={<SignIn />} />
+      <Route path="/" element={<SignIn />} />
       <Route path="/cadastrar" element={<SignUp />} />
 
       <Route path="/emprestimos" element={<Private><Emprestimos /></Private>} />
@@ -21,7 +21,7 @@ function RoutesApp() {
       <Route path="/novo" element={<Private><New /></Private>} />
       <Route path="/novo/:id" element={<Private><New /></Private>} />
 
-      <Route path="*" element={<h1>Página não encontrada. 404</h1>} />
+      <Route path="*" element={<SignIn />} />
     </Routes>
     
   );
