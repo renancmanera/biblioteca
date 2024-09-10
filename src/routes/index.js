@@ -21,7 +21,7 @@ function RoutesApp() {
       <Route path="/novo" element={<Private><New /></Private>} />
       <Route path="/novo/:id" element={<Private><New /></Private>} />
 
-      <Route path="*" element={<SignIn />} />
+      <Route path="*" element={<h1>Página não encontrada. 404</h1>} />
     </Routes>
     
   );
