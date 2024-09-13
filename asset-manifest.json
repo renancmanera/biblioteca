@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/biblioteca/static/css/main.f3e32e06.css",
+    "main.js": "/biblioteca/static/js/main.01c659ca.js",
+    "static/js/453.9dca6985.chunk.js": "/biblioteca/static/js/453.9dca6985.chunk.js",
+    "static/media/logo.png": "/biblioteca/static/media/logo.338d4f24287182210c74.png",
+    "static/media/cover.jpg.avif": "/biblioteca/static/media/cover.jpg.8f8a9ce7f7e1940a354d.avif",
+    "index.html": "/biblioteca/index.html",
+    "main.f3e32e06.css.map": "/biblioteca/static/css/main.f3e32e06.css.map",
+    "main.01c659ca.js.map": "/biblioteca/static/js/main.01c659ca.js.map",
+    "453.9dca6985.chunk.js.map": "/biblioteca/static/js/453.9dca6985.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f3e32e06.css",
+    "static/js/main.01c659ca.js"
+  ]
+}
